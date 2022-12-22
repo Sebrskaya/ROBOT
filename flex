@@ -6,7 +6,7 @@
 
 #include <string.h>
 
-#include "robot1.tab.h"
+#include "robot.tab.h"
 
 %}
 
@@ -20,13 +20,13 @@
 
  /* single character ops */
 
-"(" 	{ return OB; }
+"("     { return OB; }
 
-")" 	{ return CB; }
+")"     { return CB; }
 
-"{"	{ return FOB; } 
+"{"     { return FOB; } 
 
-"}" 	{ return FCB; }
+"}"     { return FCB; }
 
 
 
@@ -52,7 +52,7 @@
 
  /*names*/
 
-[0-9]+    { yylval.i = atoi(yytext); return VALUE; }
+[0-9]+    { yylval.i = atoi(yytext); return STEPS; }
 
 "left"    { return LEFT; }
 
